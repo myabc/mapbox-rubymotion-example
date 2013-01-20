@@ -6,7 +6,8 @@ class AppDelegate
       view_controller_class  = NSClassFromString("#{type.camelize}LayerViewController")
       view_controller = view_controller_class.alloc.initWithNibName(nil, bundle:nil)
       view_controller.tabBarItem = UITabBarItem.alloc.initWithTitle("#{type.capitalize} Layer",
-                                  image:nil, tag:0)
+                                    image:UIImage.imageNamed("#{type}.png"),
+                                    tag:0)
       controllers << view_controller
     end
     tab_bar_controller.viewControllers = view_controllers
