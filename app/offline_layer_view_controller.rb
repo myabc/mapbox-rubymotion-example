@@ -8,7 +8,7 @@ class OfflineLayerViewController < UIViewController
     offline_source  = init_tiles_source_with_tile_set_resource('control-room-0.2.0', ofType:'mbtiles')
     map_view        = RMMapView.alloc.initWithFrame(self.view.bounds, andTilesource:offline_source)
     map_view.zoom   = 2
-    #map_view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth
+    map_view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth
     map_view.adjustTilesForRetinaDisplay = true
 
     self.view.addSubview(map_view)
