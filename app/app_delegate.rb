@@ -1,6 +1,6 @@
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+    @window = UIWindow.alloc.initWithFrame(App.bounds)
     tab_bar_controller = UITabBarController.alloc.init
     view_controllers   = %w(online offline interactive).each_with_object([]) do |type, controllers|
       view_controller_class  = NSClassFromString("#{type.camelize}LayerViewController")
