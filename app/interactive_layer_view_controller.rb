@@ -25,19 +25,16 @@ class InteractiveLayerViewController < UIViewController
         forPoint:point, inMapView:map_view)
 
       if formatted_output && !formatted_output.empty?
-
         # parse the country name out of the content
-        country_name_start = formatted_output.rangeOfString("<strong>").location + "<strong>".length
-        country_name_end   = formatted_output.rangeOfString("</strong>").location
-        country_name       = formatted_output.substringWithRange(NSMakeRange(country_name_start, country_name_end - country_name_start))
+        country_name_start = formatted_output.index('<strong>') + '<string>'.length
+        country_name_end   = formatted_output.index('</strong>')
+        country_name       = formatted_output.slice(country_name_start, country_name_end - country_name_start)
 
         # parse the flag image out of the content
-        flag_image_start = formatted_output.rangeOfString("base64,").location + "base64,".length
-        flag_image_end   = formatted_output.rangeOfString("\" style").location
+        flag_image_start = formatted_output.index('base64,') + 'base64,'.length
+        flag_image_end   = formatted_output.index("\" style")
         flag_image       = UIImage.imageWithData(
-                             NSData.dataFromBase64String(
-                               formatted_output.substringWithRange(NSMakeRange(flag_image_start, flag_image_end))
-                             )
+                             NSData.dataFromBase64String(formatted_output.slice(flag_image_start, flag_image_end))
                            )
 
         annotation = RMAnnotation.annotationWithMapView(map_view, coordinate:map_view.pixelToCoordinate(point), andTitle:country_name)
