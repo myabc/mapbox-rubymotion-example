@@ -8,16 +8,19 @@ PODS:
   - FMDB (= 2.0)
   - GRMustache (= 5.4.3)
   - SMCalloutView (= 1.0.1)
+- NSData+Base64 (1.0.0)
 - SMCalloutView (1.0.1)
 
 DEPENDENCIES:
 - MapBox
+- NSData+Base64
 
 SPEC CHECKSUMS:
   FMDB: 77fb1c93b51bbf14d84d49d5374344b7f68c54f1
   GRMustache: dc2dce488f84524420d0c321c65d9367eb890a34
   JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
   MapBox: 071830b80f9cafcb51349520772f2e3b385d7d6b
+  NSData+Base64: 8b910cb8a64f45daec6fb15936c36a9a911c57ca
   SMCalloutView: 25807b1995e8469473848ef01c83bba9b4efe277
 
 COCOAPODS: 0.16.1

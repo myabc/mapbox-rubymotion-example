@@ -8,6 +8,7 @@ Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'MapBoxRubyMotionExample'
   app.pods do
+    pod 'NSData+Base64'
     pod 'MapBox'
   end
 
