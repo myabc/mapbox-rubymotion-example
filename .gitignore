@@ -4,6 +4,9 @@ tags
 resources/*.nib
 resources/*.momd
 resources/*.storyboardc
+resources/*.mbtiles
+resources/*.png
+resources/Mapbox.bundle
 .DS_Store
 nbproject
 .redcar
