@@ -3,8 +3,8 @@ class InteractiveLayerViewController < UIViewController
   def viewDidLoad
     super
 
-    interactice_source  = RMMapBoxSource.alloc.initWithMapID('examples.map-zmy97flj')
-    map_view            = RMMapView.alloc.initWithFrame(self.view.bounds, andTilesource:interactice_source)
+    interactive_source  = RMMapBoxSource.alloc.initWithMapID('examples.map-zmy97flj')
+    map_view            = RMMapView.alloc.initWithFrame(self.view.bounds, andTilesource:interactive_source)
     map_view.delegate   = self
     map_view.zoom       = 2
     map_view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth
