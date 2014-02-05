@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 $:.unshift("/Library/RubyMotion/lib")
-require 'motion/project'
-require 'bundler'
-Bundler.require
+require 'motion/project/template/ios'
+
+begin
+  require 'bundler'
+  Bundler.require
+rescue LoadError
+end
 
 IOS_EXAMPLE_DIR = '../mapbox-ios-example/MapBox\ Example'
 
