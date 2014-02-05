@@ -1,26 +1,29 @@
-
 PODS:
-- FMDB (2.0)
-- GRMustache (5.4.3):
-  - JRSwizzle (~> 1.0)
-- JRSwizzle (1.0)
-- MapBox (0.5.2):
-  - FMDB (= 2.0)
-  - GRMustache (= 5.4.3)
-  - SMCalloutView (= 1.0.1)
-- NSData+Base64 (1.0.0)
-- SMCalloutView (1.0.1)
+  - FMDB (2.0):
+    - FMDB/standard
+  - FMDB/common (2.0)
+  - FMDB/standard (2.0):
+    - FMDB/common
+  - GRMustache (5.4.3):
+    - JRSwizzle (~> 1.0)
+  - JRSwizzle (1.0)
+  - MapBox (1.1.0):
+    - FMDB (= 2.0)
+    - GRMustache (= 5.4.3)
+    - SMCalloutView (= 1.1)
+  - NSData+Base64 (1.0.0)
+  - SMCalloutView (1.1)
 
 DEPENDENCIES:
-- MapBox
-- NSData+Base64
+  - MapBox
+  - NSData+Base64
 
 SPEC CHECKSUMS:
-  FMDB: 77fb1c93b51bbf14d84d49d5374344b7f68c54f1
-  GRMustache: dc2dce488f84524420d0c321c65d9367eb890a34
+  FMDB: a1fcc5227e7f38288f1b04b20045b9fdb8c92622
+  GRMustache: f97f90a320c36896b08ca2624003e4ab8da7cfb1
   JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
-  MapBox: 071830b80f9cafcb51349520772f2e3b385d7d6b
-  NSData+Base64: 8b910cb8a64f45daec6fb15936c36a9a911c57ca
-  SMCalloutView: 25807b1995e8469473848ef01c83bba9b4efe277
+  MapBox: 45fea4cb7c21c1f6f5da36de8f8235137c04988b
+  NSData+Base64: 4819562faee4544e3cf5703f2139820b09732b28
+  SMCalloutView: 1c7d62044508a8d405c25495c380b17c613f769e
 
-COCOAPODS: 0.16.1
+COCOAPODS: 0.29.0

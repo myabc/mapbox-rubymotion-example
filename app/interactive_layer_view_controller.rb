@@ -3,7 +3,7 @@ class InteractiveLayerViewController < UIViewController
   def viewDidLoad
     super
 
-    interactive_source  = RMMapBoxSource.alloc.initWithMapID('examples.map-zmy97flj')
+    interactive_source  = RMMapboxSource.alloc.initWithMapID('examples.map-zmy97flj')
     map_view            = RMMapView.alloc.initWithFrame(self.view.bounds, andTilesource:interactive_source)
     map_view.delegate   = self
     map_view.zoom       = 2
